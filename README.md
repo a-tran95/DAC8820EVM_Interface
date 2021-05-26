@@ -6,3 +6,8 @@ Project involved interfacing the Texas Instruments DAC8820EVM DAC Evaluation Boa
 VERILOG CODE 
 ****************
 This Verilog code allows users to select the output frequency and PAM types using the FPGA's pushbuttons.
+
+****************
+MATLAB CODE
+****************
+The MATLAB CODE takes the .csv files exported from the oscilloscope and computes the Bit Error Rate.
