@@ -7,9 +7,9 @@ module DACtest(GPIO_1,SW,LEDR,LEDG,CLOCK_50,KEY,HEX7,HEX6,HEX5,HEX4,HEX3,HEX2,HE
 	output [3:0] LEDR;
 	output [7:0] LEDG;
 	
-	wire 	dclk_wire,				//	Data Clock Output
-			cclk_wire,				// Data Control Clock Output
-			randseq;					//	Next output of PRBS sequence		
+	wire 	dclk_wire,		// Data Clock Output
+		cclk_wire,		// Data Control Clock Output
+		randseq;		// Next output of PRBS sequence		
 	wire [27:0] counter_wire;	// Clock Division Counter
 	wire [2:0] fmode_wire;		// Frequency Mode
 	wire [1:0] mmode_wire;		// Modulation Mode
@@ -21,12 +21,12 @@ module DACtest(GPIO_1,SW,LEDR,LEDG,CLOCK_50,KEY,HEX7,HEX6,HEX5,HEX4,HEX3,HEX2,HE
 	// KEY[0] 			- Modulation Select
 	// KEY[1] 			- Frequency Select
 	// KEY[2] 			- Quick Reset (Outputs 0 for as long as key held)
-	// GPIO_1 [1:0] 	- WRT & LDAC Pulse
-	//	GPIO_1 [6:2]	- Output
-	//	GPIO_1 [7]		- Data Clock
-	// SW[1]				- DAC RST control (Pauses DAC output at current state)
-	// LEDR [2:0]		- Frequency Mode
-	// LEDG [1:0]		- Modulation Mode
+	// GPIO_1 [1:0] 		- WRT & LDAC Pulse
+	// GPIO_1 [6:2]			- Output
+	// GPIO_1 [7]			- Data Clock
+	// SW[1]			- DAC RST control (Pauses DAC output at current state)
+	// LEDR [2:0]			- Frequency Mode
+	// LEDG [1:0]			- Modulation Mode
 
 	// User-selectable Frequency
 	freqselect fsled(.sel(KEY[1]),.mode(LEDG[7:5]),.count(counter_wire[27:0]));
