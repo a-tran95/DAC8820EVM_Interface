@@ -1,13 +1,9 @@
-# FPGA-Interfaced Optical Communications Transmitter Testbench
+# FPGA-Interfaced DAC
 
-Project involved interfacing Texas Instruments DAC8820EVM DAC Evaluation Board onto the Altera DE2 Development and Education Board in order to simulate an optical communications system's transmission side.
+This repository contains code used in my final year project: an FPGA-interfaced Optical Communications Transmitter Testbench. The code is a user interface that allows users to select the frequency clock and PAM level for a PRBS output.
 
-****************
-VERILOG CODE 
-****************
-This Verilog code allows users to select the output frequency and PAM types using the FPGA's pushbuttons.
 
-****************
-MATLAB CODE
-****************
+
+
+The Verilog code allows users to select the output frequency and PAM types using the FPGA's pushbuttons.
 The MATLAB CODE takes the .csv files exported from the oscilloscope and computes the Bit Error Rate.
